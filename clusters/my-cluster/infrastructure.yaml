@@ -1,0 +1,13 @@
+apiVersion: kustomize.toolkit.fluxcd.io/v1beta2
+kind: Kustomization
+metadata:
+  name: redis
+spec:
+  interval: 5m
+  sourceRef:
+    kind: GitRepository
+    name: flux-tenant-podinfo
+  path: ./infrastructure/redis
+  prune: true
+  wait: true
+  timeout: 5m
