@@ -15,8 +15,8 @@ spec:
       version: "16.5.5"
   interval: 1h0m0s
   values:
-    cluster:
-      enabled: false
+    replica:
+      replicaCount: 1
     master:
       persistence:
         enabled: false
