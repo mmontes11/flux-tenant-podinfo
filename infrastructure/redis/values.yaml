@@ -7,5 +7,5 @@ master:
     enabled: false
 auth:
   enabled: true
-  existingSecret: "redis-auth"
+  existingSecret: "redis"
   existingSecretPasswordKey: "password"
