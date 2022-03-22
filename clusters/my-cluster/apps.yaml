@@ -1,0 +1,17 @@
+apiVersion: kustomize.toolkit.fluxcd.io/v1beta2
+kind: Kustomization
+metadata:
+  name: podinfo
+  namespace: podinfo
+spec:
+  dependsOn:
+    - name: redis
+  interval: 5m
+  sourceRef:
+    kind: GitRepository
+    name: flux-tenant-podinfo
+    namespace: flux-system
+  path: ./apps/my-cluster/podinfo
+  prune: true
+  wait: true
+  timeout: 5m
