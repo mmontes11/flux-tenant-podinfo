@@ -13,5 +13,4 @@ spec:
     namespace: flux-system
   path: ./apps/my-cluster/podinfo
   prune: true
-  wait: true
   timeout: 5m
